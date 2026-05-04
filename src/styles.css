@@ -132,6 +132,11 @@ body.light .status-pill, body.light .auth-pill, body.light .theme-toggle, body.l
 .dot.offline { background: var(--hate); box-shadow: 0 0 14px rgba(255,79,123,.55); }
 @keyframes pulse { 0%,100%{transform:scale(1);opacity:.7} 50%{transform:scale(1.55);opacity:1} }
 
+/* Clerk Overrides */
+.cl-userButtonOuterIdentifier {
+  color: var(--text) !important;
+}
+
 .hero { min-height: 100vh; padding-top: 130px; display: flex; align-items: center; justify-content: center; overflow: hidden; width: 100%; }
 .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
 .hero h1 { font-size: clamp(54px, 7vw, 104px); line-height: .92; margin: 22px 0 18px; max-width: 100%; overflow-wrap: anywhere; }
@@ -383,8 +388,8 @@ html.theme-light .tag, body.light .tag {
 
 @media (max-width: 1050px) {
   .nav-links { display: none; }
-  .nav-inner { flex-wrap: wrap; padding: 12px 0; }
-  .nav-actions { margin-left: auto; flex-wrap: wrap; justify-content: flex-end; }
+  .nav-inner { flex-wrap: nowrap; padding: 12px 16px; }
+  .nav-actions { margin-left: auto; flex-wrap: nowrap; justify-content: flex-end; width: auto; }
   .hero-grid, .split, .app-shell { grid-template-columns: 1fr; }
   .input-pane { border-right: 0; border-bottom: 1px solid var(--border); }
   .stats-grid { grid-template-columns: repeat(3, 1fr); }
@@ -396,10 +401,16 @@ html.theme-light .tag, body.light .tag {
 
 @media (max-width: 680px) {
   section { padding: 72px 16px; scroll-margin-top: 128px; }
-  .nav-inner { align-items: flex-start; gap: 12px; }
-  .brand { width: 100%; }
-  .nav-actions { width: 100%; justify-content: flex-start; gap: 8px; }
-  .auth-pill, .status-pill { display: none; }
+  .nav-inner { align-items: center; justify-content: space-between; gap: 8px; flex-wrap: nowrap; }
+  .brand { width: auto; gap: 8px; }
+  .badge { width: 34px; height: 34px; font-size: 13px; }
+  .version { display: none; } /* Hide 'AI' tag on mobile to save space */
+  .nav-actions { width: auto; justify-content: flex-end; gap: 8px; flex-wrap: nowrap; flex: 1; overflow-x: auto; padding-bottom: 2px; scrollbar-width: none; }
+  .nav-actions::-webkit-scrollbar { display: none; }
+  .status-pill { display: none; }
+  .auth-pill { display: inline-flex; padding: 0 10px; font-size: 10px; min-height: 30px; }
+  .demo-pill { padding: 0 10px; font-size: 10px; min-height: 30px; white-space: nowrap; }
+  .user-slot { min-height: 30px; flex-shrink: 0; }
   .hero { padding-top: 154px; min-height: auto; }
   .hero h1 { font-size: clamp(48px, 18vw, 72px); }
   .hero-copy { font-size: 15px; }
