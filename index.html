@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alfaaz — Punjabi Hate Text Detection System</title>
-  <meta name="description" content="Alfaaz is a clean Punjabi toxic text detection interface for classifying Gurmukhi text as non-toxic, toxic, or sarcastic." />
-  <meta property="og:title" content="Alfaaz — Punjabi Toxic Text Detection System" />
-  <meta property="og:description" content="A product-grade Punjabi NLP interface for real-time toxic text detection." />
+  <meta name="description" content="Alfaaz is a clean Punjabi hate text detection interface for classifying Gurmukhi text as non-hate, hate, or sarcastic." />
+  <meta property="og:title" content="Alfaaz — Punjabi hate Text Detection System" />
+  <meta property="og:description" content="A product-grade Punjabi NLP interface for real-time hate text detection." />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#00E5FF" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -45,7 +45,7 @@
           <div class="kicker">Major Project · NLP · Deep Learning</div>
           <h1>Alfaaz</h1>
           <div class="hero-subtitle">Punjabi Hate Text Detection System</div>
-          <p class="hero-copy">A clean AI interface for reviewing Punjabi Gurmukhi text and identifying whether a message is non-toxic, toxic, or sarcastic. Built for fast moderation workflows, transparent confidence, and practical real-time use.</p>
+          <p class="hero-copy">A clean AI interface for reviewing Punjabi Gurmukhi text and identifying whether a message is non-hate, hate, or sarcastic. Built for fast moderation workflows, transparent confidence, and practical real-time use.</p>
           <div class="cta-row">
             <a class="btn btn-primary" href="#analyzer">Analyze Text →</a>
             <a class="btn" href="https://huggingface.co/spaces/DevxAman/punjabi-hate-detector" target="_blank" rel="noreferrer">Live API ↗</a>
@@ -86,8 +86,8 @@
             <textarea id="inputText" maxlength="1000" placeholder="ਇੱਥੇ ਪੰਜਾਬੀ ਟੈਕਸਟ ਲਿਖੋ..." aria-label="Punjabi text input"></textarea>
             <div class="input-meta"><span>Ctrl+Enter to analyze</span><span id="charCounter">0/1000</span></div>
             <div class="example-zone">
-              <div class="example-group"><h4>Non-toxic</h4><div class="example-buttons" data-group="safe"></div></div>
-              <div class="example-group"><h4>Toxic</h4><div class="example-buttons" data-group="hate"></div></div>
+              <div class="example-group"><h4>Non-hate</h4><div class="example-buttons" data-group="safe"></div></div>
+              <div class="example-group"><h4>hate</h4><div class="example-buttons" data-group="hate"></div></div>
               <div class="example-group"><h4>Sarcastic</h4><div class="example-buttons" data-group="sarcastic"></div></div>
             </div>
             <div class="analyze-row">
@@ -99,7 +99,7 @@
             <div class="idle">
               <div class="idle-icon">AI</div>
               <h3>Ready to review</h3>
-              <p class="text-muted">Enter a Punjabi comment to see verdict, confidence, toxicity profile, and response time.</p>
+              <p class="text-muted">Enter a Punjabi comment to see verdict, confidence, hateful profile, and response time.</p>
             </div>
           </div>
         </div>
@@ -116,7 +116,7 @@
           <p class="lead">Alfaaz avoids over-explaining the research and keeps the interface centered on the actual moderation decision.</p>
         </div>
         <div class="capability-grid reveal">
-          <article class="capability-card"><span>01</span><h3>Three-way classification</h3><p>Detects non-toxic, toxic, and sarcastic Punjabi Gurmukhi text.</p></article>
+          <article class="capability-card"><span>01</span><h3>Three-way classification</h3><p>Detects non-hate, hate, and sarcastic Punjabi Gurmukhi text.</p></article>
           <article class="capability-card"><span>02</span><h3>Transparent confidence</h3><p>Shows the winning label and the exact probability spread returned by the model.</p></article>
           <article class="capability-card"><span>03</span><h3>Real-time API</h3><p>Connects directly to the deployed inference service with timeout and offline states.</p></article>
           <article class="capability-card"><span>04</span><h3>Punjabi-first UI</h3><p>Uses proper Gurmukhi typography for input, examples, and classification review.</p></article>
@@ -135,8 +135,8 @@
         </div>
         <div class="stats-grid compact reveal">
           <div class="stat"><div class="stat-number" data-count="88.4" data-suffix="%">88.4%</div><h3>Validated Accuracy</h3><p>Held-out evaluation score for the Punjabi classifier.</p></div>
-          <div class="stat"><div class="stat-number" data-count="0.883">0.883</div><h3>Weighted F1</h3><p>Balanced metric across non-toxic, toxic, and sarcastic classes.</p></div>
-          <div class="stat"><div class="stat-number" data-count="3">3</div><h3>Safety Labels</h3><p>Safe, mild concern, and toxic/sarcastic review states.</p></div>
+          <div class="stat"><div class="stat-number" data-count="0.883">0.883</div><h3>Weighted F1</h3><p>Balanced metric across non-hate, hate, and sarcastic classes.</p></div>
+          <div class="stat"><div class="stat-number" data-count="3">3</div><h3>Safety Labels</h3><p>Safe, mild concern, and hate/sarcastic review states.</p></div>
           <div class="stat"><div class="stat-number text-stat">Gurmukhi</div><h3>Input Script</h3><p>Optimized for Punjabi text written in Gurmukhi script.</p></div>
         </div>
       </div>
@@ -162,11 +162,11 @@
 
   <footer>
     <div class="footer-grid">
-      <div><div class="brand"><span class="badge">ਅ</span><span><strong>Alfaaz</strong><br><span class="text-muted">Punjabi Toxic Text Detection System</span></span></div></div>
+      <div><div class="brand"><span class="badge">ਅ</span><span><strong>Alfaaz</strong><br><span class="text-muted">Punjabi hate Text Detection System</span></span></div></div>
       <div class="footer-links"><a href="#overview">Overview</a><a href="#analyzer">Analyzer</a><a href="#capabilities">Capabilities</a><a href="#integrations">API</a></div>
       <div class="socials"><a href="https://github.com/DevxAman/Punjabi_hate_remarks_detection" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/amandeep-singh-991bb1254/" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://x.com/DevxAman_" target="_blank" rel="noreferrer">Twitter/X</a><a href="https://huggingface.co/spaces/DevxAman/punjabi-hate-detector" target="_blank" rel="noreferrer">HuggingFace</a></div>
     </div>
-    <div class="bottom"><span>Alfaaz © 2026 · Major Project · NLP · Deep Learning</span><div class="tags"><span class="tag">Punjabi NLP</span><span class="tag">Gurmukhi</span><span class="tag">Toxicity Detection</span><span class="tag">API Ready</span></div></div>
+    <div class="bottom"><span>Alfaaz © 2026 · Major Project · NLP · Deep Learning</span><div class="tags"><span class="tag">Punjabi NLP</span><span class="tag">Gurmukhi</span><span class="tag">Hate Detection</span><span class="tag">API Ready</span></div></div>
   </footer>
 
   <div class="auth-modal" id="authModal" aria-hidden="true">
