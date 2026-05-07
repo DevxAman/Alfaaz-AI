@@ -41,11 +41,9 @@ The system uses a fine-tuned **MuRIL transformer model** capable of understandin
 
 # 🖼️ System Preview
 
-> Replace the image path below with your actual screenshot.
-
 <div align="center">
 
-![ALFAAZ Preview](./assets/alfaaz-preview.png)
+![ALFAAZ Preview](./assets/preview.png)
 
 </div>
 
